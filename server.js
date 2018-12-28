@@ -29,7 +29,7 @@ app.use(cors());
 
 
 app.get('/',(req, res)=>{
-	res.json('working');
+	res.json('working')
 })
 
 
@@ -44,8 +44,7 @@ app.put('/image',(req, res)=>{image.handleImage(req, res, db)})
 app.post('/imageurl',(req, res)=>{image.handleApiCall(req, res)})
 
 
-
-app.listen(process.env.PORT || 3000,()=>{
+app.listen( process.env.PORT || 3000,()=>{
 	console.log(`this app is running on port ${process.env.PORT}`)
 })
 
