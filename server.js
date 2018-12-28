@@ -43,12 +43,12 @@ app.put('/image',(req, res)=>{image.handleImage(req, res, db)})
 
 app.post('/imageurl',(req, res)=>{image.handleApiCall(req, res)})
 
-const DATABASE_URL = process.env.DATABASE_URL;
 
-app.listen(3000,()=>{
-	console.log(`this app is running on port ${DATABASE_URL}`)
+
+app.listen(process.env.PORT || 3000,()=>{
+	console.log(`this app is running on port ${process.env.PORT}`)
 })
-console.log(3000)
+
 
 // 	* api thinkcap
 //  /--> GET res == root this is working //check the root working
